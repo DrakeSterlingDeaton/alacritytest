@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TestPage</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="description" content="testDesc">
+    <meta name="author" content="Drake Deaton">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet'/>
+    <link href='./css/style.css' rel='stylesheet'/>
+    <script async defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<h1><b>People Page</b></h1>
+
+<br>
+
+<ol>
+    <label><b>Average Age</b></label>
+    <li th:text="${averageAge}"></li>
+    <br>
+    <label><b>Oldest Person</b></label>
+    <li th:text="${oldestPerson}"></li>
+    <br>
+    <label><b>Youngest Person</b></label>
+    <li th:text="${youngestPerson}"></li>
+</ol>
+
+<br>
+<hr>
+<br>
+
+<ol>
+    <label><b>Person 1</b></label>
+    <li th:text="${person0}"></li>
+    <br>
+    <label><b>Person 2</b></label>
+    <li th:text="${person1}"></li>
+    <br>
+    <label><b>Person 3</b></label>
+    <li th:text="${person2}"></li>
+    <br>
+    <label><b>Person 4</b></label>
+    <li th:text="${person3}"></li>
+    <br>
+    <label><b>Person 5</b></label>
+    <li th:text="${person4}"></li>
+    <br>
+</ol>
+
+<br>
+<hr>
+<br>
+
+<h2>Submit New Person</h2>
+<div class="bs-example">
+    <form action="/indexPagePost" method="POST">  <!-- th:action="@{/greeting}" th:object="${greeting}" -->
+        <label for="name">First name:</label>
+        <input type="text" class="form-control" id="name" name="name"><br><br>
+        <label for="Age">Age:</label>
+        <input type="text" class="form-control" id="age" name="age"><br><br>
+<!--        -->
+<!--        <textbox rows="4" class="form-control" name="textInfo"></textbox>-->
+        <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+    </form>
+</div>
+
+
+
+<!--<form action="/action_page.php">-->
+<!--    <label for="myfile">Select a file:</label>-->
+<!--    <input type="file" id="myfile" name="myfile"><br><br>-->
+<!--    <input type="submit">-->
+<!--</form>-->
+
+<script>
+    // $( function () {
+    //     $('div.?').hide();
+    // });
+</script>
+</body>
+</html>
